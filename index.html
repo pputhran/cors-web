@@ -5,9 +5,11 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-    $.post(" https://68sh9kbsgb.execute-api.eu-north-1.amazonaws.com/prod/",
-    {},
-    function(data,status){
+ $.ajax({
+     type: 'POST',
+     headers: {"something": "works"},
+     url: "https://68sh9kbsgb.execute-api.eu-north-1.amazonaws.com/prod/"
+ }).done(function(data){
       alert("Data: " + data + "\nStatus: " + status);
     });
   });
