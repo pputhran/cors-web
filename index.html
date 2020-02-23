@@ -6,7 +6,8 @@
 $(document).ready(function(){
   $("button").click(function(){
  $.ajax({
-     accepts: "application/json",
+     type: 'POST',
+     contentType: "application/json",
      headers: {"something": "works"},
      url: "https://68sh9kbsgb.execute-api.eu-north-1.amazonaws.com/prod/"
  }).done(function(data){
