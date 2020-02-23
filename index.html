@@ -11,7 +11,7 @@ $(document).ready(function(){
      headers: {"something": "works"},
      url: "https://68sh9kbsgb.execute-api.eu-north-1.amazonaws.com/prod/"
  }).done(function(data){
-      alert("Data: " + data + "\nStatus: " + status);
+      console.log("Data: " + data + "\nStatus: " + status);
     });
   });
 });
